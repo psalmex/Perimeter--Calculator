@@ -1,231 +1,152 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Calculator</title>
-    </head>
-    <body>
-        <form>
-            <h3>Calulate the perimeter of a rectangle</h3>
-            <label for="number">Lenght:</label>
-            <select id="number" name="number">
-                <option value="ft.">ft.</option>
-                <option value="inches">inches</option>
-                <option value="cm.">cm.</option>
-                <option value="m.">m.</option>
-            </select>
-            <br>
-            <label for="qname">width:</label>
-            <input type="text" name="name"><br>
-            <button onclick="fun()"> Calculate </button>
-            <button onclick="fun()"> Help</button><br>
-            <label for="qname">Perimeter Result:</label><br>
-            <input type="text" name="name"><br>
-            <p>Perimeter Result:</p>
-            <p> <a href="https://www./">Add this calculator to your site.</a></p>
-            <p>
-                Click the following button to get the area and perimeter of circle.
-            </p>
-            <p id="para"></p>
-            <p id="para1"></p>
-            <button onclick="fun()"> Click me </button>
-        </form>
-        <form onsubmit="return calcBMI();">
-            System:
-            <label>
-                <input type="radio" id="bmi-metric" name="bmi-measure" onchange="measureBMI()" checked /> Metric
-            </label>
-            <label>
-                <input type="radio" id="bmi-imperial" name="bmi-measure" onchange="measureBMI()" /> Imperial
-            </label>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <scrtpt src="script.js"></scrtpt>
+</head>
+
+<body>
+    <div onsubmit="return calcBMI();">
+        PERIMETER OF SHAPES:
+        <label>
+            <input type="radio" id="circle-[eri" name="bmi-measure" onchange="measureBMI()" /> CIRCLE
+        </label>
+        <label>
+            <input type="radio" id="square-peri" name="bmi-measure" onchange="measureBMI()" /> SQUARE
+        </label>
+        <label>
+            <input type="radio" id="rectangle-peri" name="bmi-measure" onchange="measureBMI()" /> RECTANGLE
+        </label>
+        <label>
+            <input type="radio" id="cylinder-peri" name="bmi-measure" onchange="measureBMI()" /> CYLINDER
+        </label>
+        <br><br>
+
+        <form style="background-color: rebeccapurple;">
+            <h3>CIRCLE PERIMETER CALCULATOR</h3>
+
+            Radius:
+            <input id="bmi-weight" type="number" min="1" max="1000" required />
+            <span id="bmi-weight-unit">
+                <select id="number" name="number">
+                    <option value="ft.">ft</option>
+                    <option value="inches">in</option>
+                    <option value="cm.">cm</option>
+                    <option value="m.">m</option>
+                    <option value="m.">mm</option>
+                    <option value="m.">yd</option>
+                </select>
+            </span>
             <br><br>
-    
-            Weight:
-            <input id="bmi-weight" type="number" min="1" max="635" required />
-            <span id="bmi-weight-unit">KG</span>
-            <br><br>
-    
-            Height:
-            <input id="bmi-height" type="number" min="54" max="272" required />
-            <span id="bmi-height-unit">CM</span>
-            <br><br>
-    
-            <input type="submit" value="Calculate BMI" />
+
+            <input type="submit" value="CALCULATE" />
             <div id="bmi-results"></div>
-        </form>
-        <form>
-            <label>firstname</label>
-            <input type="name" value="firstnmae" />
+            <label for="qname">Perimeter Result:</label><br>
+            <p id="para"><input type="text" name="name"></p>
         </form>
 
         <form style="background-color: blueviolet;">
-            <h3>RECTANGLE PERIMETER CALCULATOR</h3>
-            <label>Firstname:</label>
-            <input type="name" value="Firstname" />
-            <label>Lastname:</label>
-            <input type="name" value="Lastname" />
-            <label>email:</label>
-            <input type="name" value="Email" />
-            <input type="submit" value="submit" />
-    
-            <h3>Calulate the perimeter of a rectangle</h3>
-            <label for="number">Lenght:</label>
-            <input type="text" name="name">
-            <select id="number" name="number">
-                <option value="ft.">ft</option>
-                <option value="inches">in</option>
-                <option value="cm.">cm</option>
-                <option value="m.">m</option>
-                <option value="m.">mm</option>
-                <option value="m.">yd</option>
-            </select>
-            <br>
-            <label for="qname">width:</label>
-            <input type="text" name="name"><br>
-            <input type="submit" value="CALCULATE">
-            <input type="submit" value="HELP">
+            <h3>SQUARE PERIMETER CALCULATOR</h3>
+
+            Lenght:
+            <input id="bmi-weight" type="number" min="1" max="1000" required />
+            <span id="bmi-weight-unit">
+                <select id="number" name="number">
+                    <option value="ft.">ft</option>
+                    <option value="inches">in</option>
+                    <option value="cm.">cm</option>
+                    <option value="m.">m</option>
+                    <option value="m.">mm</option>
+                    <option value="m.">yd</option>
+                </select>
+            </span>
+            <br><br>
+
+            Width:
+            <input id="bmi-height" type="number" min="1" max="1000" required />
+            <span id="bmi-height-unit">
+                <select id="number" name="number">
+                    <option value="ft.">ft</option>
+                    <option value="inches">in</option>
+                    <option value="cm.">cm</option>
+                    <option value="m.">m</option>
+                    <option value="m.">mm</option>
+                    <option value="m.">yd</option>
+                </select>
+            </span>
+            <br><br>
+
+            <input type="submit" value="CALCULATE" />
+            <div id="bmi-results"></div>
             <label for="qname">Perimeter Result:</label><br>
-            <input type="text" name="name"><br>
-            <p id="para"></p>
-            <p id="para1"></p>
-            <button onclick="fun()"> Click me </button>
-            </form>
-
-            <form onsubmit="return calcBMI();">
-                PERIMETER:
-                <label>
-                    <input type="radio" id="bmi-metric" name="bmi-measure" onchange="measureBMI()" checked /> CIRCLE
-                </label>
-                <label>
-                    <input type="radio" id="bmi-imperial" name="bmi-measure" onchange="measureBMI()" /> SQUARE
-                </label>
-                <label>
-                    <input type="radio" id="bmi-imperial" name="bmi-measure" onchange="measureBMI()" /> RECTANGLE
-                </label>
-                <label>
-                    <input type="radio" id="bmi-imperial" name="bmi-measure" onchange="measureBMI()" /> CYLINDER
-                </label>
-                <br><br>
-
-                <div style="background-color: rebeccapurple;">
-                    <h3>CIRCLE PERIMETER CALCULATOR</h3>
-        
-                Radius:
-                <input id="bmi-weight" type="number" min="1" max="1000" required />
-                <span id="bmi-weight-unit">
-                    <select id="number" name="number">
-                        <option value="ft.">ft</option>
-                        <option value="inches">in</option>
-                        <option value="cm.">cm</option>
-                        <option value="m.">m</option>
-                        <option value="m.">mm</option>
-                        <option value="m.">yd</option>
-                    </select>
-                </span>
-                <br><br>
-        
-                <input type="submit" value="CALCULATE" />
-                <div id="bmi-results"></div>
-                <label for="qname">Perimeter Result:</label><br>
-            <p id="para"><input type="text" name="name"></p>
-                </div>
-
-            <div style="background-color: blueviolet;">
-                <h3>SQUARE PERIMETER CALCULATOR</h3>
-        
-                Lenght:
-                <input id="bmi-weight" type="number" min="1" max="1000" required />
-                <span id="bmi-weight-unit">
-                    <select id="number" name="number">
-                        <option value="ft.">ft</option>
-                        <option value="inches">in</option>
-                        <option value="cm.">cm</option>
-                        <option value="m.">m</option>
-                        <option value="m.">mm</option>
-                        <option value="m.">yd</option>
-                    </select>
-                </span>
-                <br><br>
-        
-                Width:
-                <input id="bmi-height" type="number" min="1" max="1000" required />
-                <span id="bmi-height-unit">
-                    <select id="number" name="number">
-                        <option value="ft.">ft</option>
-                        <option value="inches">in</option>
-                        <option value="cm.">cm</option>
-                        <option value="m.">m</option>
-                        <option value="m.">mm</option>
-                        <option value="m.">yd</option>
-                    </select>
-                </span>
-                <br><br>
-        
-                <input type="submit" value="CALCULATE" />
-                <div id="bmi-results"></div>
-                <label for="qname">Perimeter Result:</label><br>
             <p id="para" style="border: 4px solid;">resi</p>
-            </div>
+        </form>
 
-            <div style="background-color: rosybrown;">
-                <h3>RECTANGLE PERIMETER CALCULATOR</h3>
-        
-                Lenght:
-                <input id="bmi-weight" type="number" min="1" max="1000" required />
-                <span id="bmi-weight-unit">
-                    <select id="number" name="number">
-                        <option value="ft.">ft</option>
-                        <option value="inches">in</option>
-                        <option value="cm.">cm</option>
-                        <option value="m.">m</option>
-                        <option value="m.">mm</option>
-                        <option value="m.">yd</option>
-                    </select>
-                </span>
-                <br><br>
-        
-                Width:
-                <input id="bmi-height" type="number" min="1" max="1000" required />
-                <span id="bmi-height-unit">
-                    <select id="number" name="number">
-                        <option value="ft.">ft</option>
-                        <option value="inches">in</option>
-                        <option value="cm.">cm</option>
-                        <option value="m.">m</option>
-                        <option value="m.">mm</option>
-                        <option value="m.">yd</option>
-                    </select>
-                </span>
-                <br><br>
-        
-                <input type="submit" value="CALCULATE" />
-                <div id="bmi-results"></div>
-                <label for="qname">Perimeter Result:</label><br>
+        <form style="background-color: rosybrown;">
+            <h3>RECTANGLE PERIMETER CALCULATOR</h3>
+
+            Lenght:
+            <input id="bmi-weight" type="number" min="1" max="1000" required />
+            <span id="bmi-weight-unit">
+                <select id="number" name="number">
+                    <option value="ft.">ft</option>
+                    <option value="inches">in</option>
+                    <option value="cm.">cm</option>
+                    <option value="m.">m</option>
+                    <option value="m.">mm</option>
+                    <option value="m.">yd</option>
+                </select>
+            </span>
+            <br><br>
+
+            Width:
+            <input id="bmi-height" type="number" min="1" max="1000" required />
+            <span id="bmi-height-unit">
+                <select id="number" name="number">
+                    <option value="ft.">ft</option>
+                    <option value="inches">in</option>
+                    <option value="cm.">cm</option>
+                    <option value="m.">m</option>
+                    <option value="m.">mm</option>
+                    <option value="m.">yd</option>
+                </select>
+            </span>
+            <br><br>
+
+            <input type="submit" value="CALCULATE" />
+            <div id="bmi-results"></div>
+            <label for="qname">Perimeter Result:</label><br>
             <p id="para"><input type="text" name="name"></p>
-            </div>
+        </form>
 
-            <div style="background-color: royalblue;">
-                <h3>CYLINDER PERIMETER CALCULATOR</h3>
-        
-                Radius:
-                <input id="bmi-weight" type="number" min="1" max="1000" required />
-                <span id="bmi-weight-unit">
-                    <select id="number" name="number">
-                        <option value="ft.">ft</option>
-                        <option value="inches">in</option>
-                        <option value="cm.">cm</option>
-                        <option value="m.">m</option>
-                        <option value="m.">mm</option>
-                        <option value="m.">yd</option>
-                    </select>
-                </span>
-                <br><br>
-        
-                <input type="submit" value="CALCULATE" />
-                <div id="bmi-results"></div>
-                <label for="qname">Perimeter Result:</label><br>
+        <form style="background-color: royalblue;">
+            <h3>CYLINDER PERIMETER CALCULATOR</h3>
+
+            Radius:
+            <input id="bmi-weight" type="number" min="1" max="1000" required />
+            <span id="bmi-weight-unit">
+                <select id="number" name="number">
+                    <option value="ft.">ft</option>
+                    <option value="inches">in</option>
+                    <option value="cm.">cm</option>
+                    <option value="m.">m</option>
+                    <option value="m.">mm</option>
+                    <option value="m.">yd</option>
+                </select>
+            </span>
+            <br><br>
+
+            <input type="submit" value="CALCULATE" />
+            <div id="bmi-results"></div>
+            <label for="qname">Perimeter Result:</label><br>
             <p id="para"><input type="text" name="name"></p><br>
-            </div>
-            </form>
-    
-    </body>
+        </form>
+        <button onclick="fun()"> Help</button><br>
+        <p> <a href="https://www./">Add this calculator to your site.</a></p>
+    </div>
+
+</body>
+
 </html>
