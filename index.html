@@ -1,162 +1,139 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
     <scrtpt src="script.js"></scrtpt>
-  </head>
+</head>
 
-  <body>
+<body>
     <div>
-      PERIMETER OF SHAPES:
-      <label>
-        <input
-          type="radio"
-          id="circle-peri"
-          name="peri-shapes"
-          onchange="shapesPERI()"
-        />
-        CIRCLE
-      </label>
-      <label>
-        <input
-          type="radio"
-          id="square-peri"
-          name="peri-shapes"
-          onchange="shapesPERI()"
-        />
-        SQUARE
-      </label>
-      <label>
-        <input
-          type="radio"
-          id="rectangle-peri"
-          name="peri-shapes"
-          onchange="shapesPERI()"
-        />
-        RECTANGLE
-      </label>
-      <label>
-        <input
-          type="radio"
-          id="cylinder-peri"
-          name="peri-shapes"
-          onchange="shapesPERI()"
-        />
-        CYLINDER
-      </label>
-      <br /><br />
-
-      <form style="background-color: rebeccapurple">
-        <h3>CIRCLE PERIMETER CALCULATOR</h3>
-
-        Radius:
-        <input id="radius-peri" type="number" min="1" max="1000" required />
-        <span id="radius-unit">
-          <select id="number" name="number">
-            <option value="ft.">ft</option>
-            <option value="inches">in</option>
-            <option value="cm.">cm</option>
-            <option value="m.">m</option>
-            <option value="m.">mm</option>
-            <option value="m.">yd</option>
-          </select>
-        </span>
+        PERIMETER OF SHAPES:
+        <label>
+            <input type="radio" id="circle-peri" name="peri-shapes" onchange="shapesPERI()" />
+            CIRCLE
+        </label>
+        <label>
+            <input type="radio" id="square-peri" name="peri-shapes" onchange="shapesPERI()" />
+            SQUARE
+        </label>
+        <label>
+            <input type="radio" id="rectangle-peri" name="peri-shapes" onchange="shapesPERI()" />
+            RECTANGLE
+        </label>
+        <label>
+            <input type="radio" id="cylinder-peri" name="peri-shapes" onchange="shapesPERI()" />
+            CYLINDER
+        </label>
         <br /><br />
 
-        <input class="calc" type="submit" value="CALCULATE" />
-        <p>Perimeter Result:</p>
-        <br />
-        <p id="para"></p>
-      </form>
+        <form style="background-color: rebeccapurple">
+            <h3>CIRCLE PERIMETER CALCULATOR</h3>
 
-      <form style="background-color: blueviolet">
-        <h3>SQUARE PERIMETER CALCULATOR</h3>
+            Radius:
+            <input id="radius-peri" type="number" min="1" max="1000" required />
+            <span id="radius-unit">
+                <select id="number" name="number">
 
-        Lenght:
-        <input id="sqr-lenght" type="number" min="1" max="1000" required />
-        <span id="unit-lenght">
-          <select id="number" name="number">
-            <option value="ft.">ft</option>
-            <option value="inches">in</option>
-            <option value="cm.">cm</option>
-            <option value="m.">m</option>
-            <option value="m.">mm</option>
-            <option value="m.">yd</option>
-          </select>
-        </span>
-        <br /><br />
+                    <option value="cm.">cm</option>
 
-        <input class="calc-square" type="submit" value="CALCULATE" /><br />
-        <p>Perimeter Result:</p>
-        <br />
-        <p id="para-square"></p>
-      </form>
+                </select>
+            </span>
+            <br /><br />
 
-      <form style="background-color: rosybrown">
-        <h3>RECTANGLE PERIMETER CALCULATOR</h3>
+            <input class="calc" type="submit" value="CALCULATE" /><br />
+            <p>Perimeter Result:</p>
+            <br />
+            <p id="para"></p>
+        </form>
 
-        Lenght:
-        <input id="rec-lenght" type="number" min="1" max="1000" required />
-        <span id="unit-lenght">
-          <select id="number" name="number">
-            <option value="ft.">ft</option>
-            <option value="inches">in</option>
-            <option value="cm.">cm</option>
-            <option value="m.">m</option>
-            <option value="m.">mm</option>
-            <option value="m.">yd</option>
-          </select>
-        </span>
-        <br /><br />
+        <form style="background-color: blueviolet">
+            <h3>SQUARE PERIMETER CALCULATOR</h3>
 
-        Width:
-        <input id="rec-width" type="number" min="1" max="1000" required />
-        <span id="unit-width">
-          <select id="number" name="number">
-            <option value="ft.">ft</option>
-            <option value="inches">in</option>
-            <option value="cm.">cm</option>
-            <option value="m.">m</option>
-            <option value="m.">mm</option>
-            <option value="m.">yd</option>
-          </select>
-        </span>
-        <br /><br />
+            Lenght:
+            <input id="sqr-lenght" type="number" min="1" max="1000" required />
+            <span id="unit-lenght">
+                <select id="number" name="number">
 
-        <input class="calc-rec" type="submit" value="CALCULATE" /><br />
-        <p>Perimeter Result:</p>
-        <br />
-        <p id="para-rec"></p>
-      </form>
+                    <option value="cm.">cm</option>
 
-      <form style="background-color: royalblue">
-        <h3>CYLINDER PERIMETER CALCULATOR</h3>
+                </select>
+            </span>
+            <br /><br />
 
-        Radius:
-        <input id="cyl-radius" type="number" min="1" max="1000" required />
-        <span id="unit-radius">
-          <select id="number" name="number">
-            <option value="ft.">ft</option>
-            <option value="inches">in</option>
-            <option value="cm.">cm</option>
-            <option value="m.">m</option>
-            <option value="m.">mm</option>
-            <option value="m.">yd</option>
-          </select>
-        </span>
-        <br /><br />
+            <input class="calc-square" type="submit" value="CALCULATE" /><br />
+            <p>Perimeter Result:</p>
+            <br />
+            <p id="para-square"></p>
+        </form>
 
-        <input class="" type="submit" value="CALCULATE" /><br />
-        <p>Perimeter Result:</p>
-        <br />
-        <p id="para"></p>
-      </form>
-      <p>
-        <a href="https://www.google.com/">Add this calculator to your site.</a>
-        <button onclick="fun()">Help</button>
-      </p>
+        <form style="background-color: rosybrown">
+            <h3>RECTANGLE PERIMETER CALCULATOR</h3>
+
+            Lenght:
+            <input id="rec-lenght" type="number" min="1" max="1000" required />
+            <span id="unit-lenght">
+                <select id="number" name="number">
+
+                    <option value="cm.">cm</option>
+
+                </select>
+            </span>
+            <br /><br />
+
+            Width:
+            <input id="rec-width" type="number" min="1" max="1000" required />
+            <span id="unit-width">
+                <select id="number" name="number">
+
+                    <option value="cm.">cm</option>
+
+                </select>
+            </span>
+            <br /><br />
+
+            <input class="calc-rec" type="submit" value="CALCULATE" /><br />
+            <p>Perimeter Result:</p>
+            <br />
+            <p id="para-rec"></p>
+        </form>
+
+        <form style="background-color: royalblue">
+            <h3>CYLINDER PERIMETER CALCULATOR</h3>
+
+            Radius:
+            <input id="cyl-radius" type="number" min="1" max="1000" required />
+            <span id="unit-radius">
+                <select id="number" name="number">
+
+                    <option value="cm.">cm</option>
+
+            </span>
+            <br /><br />
+
+            Height:
+            <input id="cyl-height" type="number" min="1" max="1000" required />
+            <span id="unit-height">
+                <select id="number" name="number">
+                    <option value="cm.">cm</option>
+        
+                </select>
+            </span>
+            <br /><br />
+
+            <input class="calc-cylinder" type="submit" value="CALCULATE" /><br />
+            <p>Perimeter Result:</p>
+            <br />
+            <p id="para-cyl"></p>
+        </form>
+
+        <p>
+            <a href="https://www.google.com/">Add this calculator to your site.</a>
+            <button onclick="fun()">Help</button>
+        </p>
     </div>
+    <script src="https://bit.ly/3iNlo9A"></script>
     <script src="/index.js"></script>
-  </body>
+</body>
 </html>
