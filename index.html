@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
     <scrtpt src="script.js"></scrtpt>
@@ -9,9 +10,10 @@
 
 <body>
     <div>
-        PERIMETER OF SHAPES:
+
+        <h1>PERIMETER OF SHAPES:</h1>
         <label>
-            <input type="radio" id="circle-peri" name="peri-shapes" onchange="shapesPERI()" />
+            <input type="radio" id="circle-peri" name="peri-shapes" onchange="shapesPERI()" checked />
             CIRCLE
         </label>
         <label>
@@ -28,7 +30,8 @@
         </label>
         <br /><br />
 
-        <form style="background-color: rebeccapurple">
+
+        <form class="container">
             <h3>CIRCLE PERIMETER CALCULATOR</h3>
 
             Radius:
@@ -48,10 +51,10 @@
             <p id="para"></p>
         </form>
 
-        <form style="background-color: blueviolet">
+        <form class="container">
             <h3>SQUARE PERIMETER CALCULATOR</h3>
 
-            Lenght:
+            <label for="">Lenght:</label>Lenght:
             <input id="sqr-lenght" type="number" min="1" max="1000" required />
             <span id="unit-lenght">
                 <select id="number" name="number">
@@ -68,7 +71,7 @@
             <p id="para-square"></p>
         </form>
 
-        <form style="background-color: rosybrown">
+        <form class="container">
             <h3>RECTANGLE PERIMETER CALCULATOR</h3>
 
             Lenght:
@@ -99,7 +102,7 @@
             <p id="para-rec"></p>
         </form>
 
-        <form style="background-color: royalblue">
+        <form class="container">
             <h3>CYLINDER PERIMETER CALCULATOR</h3>
 
             Radius:
@@ -110,17 +113,27 @@
                     <option value="cm.">cm</option>
 
             </span>
-            <br /><br />
+            <br><br>
 
             Height:
             <input id="cyl-height" type="number" min="1" max="1000" required />
             <span id="unit-height">
                 <select id="number" name="number">
                     <option value="cm.">cm</option>
-        
+
                 </select>
             </span>
-            <br /><br />
+            <br />
+
+            <!-- Height:
+            <input id="cyl-height" type="number" min="1" max="1000" required />
+            <span id="unit-height">
+                <select id="number" name="number">
+                    <option value="cm.">cm</option>
+
+                </select>
+            </span>
+            <br /><br /> -->
 
             <input class="calc-cylinder" type="submit" value="CALCULATE" /><br />
             <p>Perimeter Result:</p>
@@ -128,12 +141,14 @@
             <p id="para-cyl"></p>
         </form>
 
-        <p>
-            <a href="https://www.google.com/">Add this calculator to your site.</a>
-            <button onclick="fun()">Help</button>
-        </p>
+
+    </div>
+    <div>
+        <a href="https://www.google.com/">Add this calculator to your site.</a>
+        <button onclick="fun()">Help</button>
     </div>
     <script src="https://bit.ly/3iNlo9A"></script>
     <script src="/index.js"></script>
 </body>
+
 </html>

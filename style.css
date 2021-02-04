@@ -1,15 +1,107 @@
 * {
-    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #f2f2f2; */
 }
+html, body {
+    overflow-x: hidden;
+}
+ body {
+    /* display: flex; */
+    /* height: 100vh; */
+    /* margin: 15px; */
+    width: 100%;
+    background-color: #010615;
+    justify-content: center;
+    align-items: center;
+} 
 
-div {
+ div {
     text-align: center;
+    color: #fff;
 }
 
-form {
-    text-align: left;
-    border-radius: 5px;
+  form {
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 20px;
     padding: 20px;
     margin-left: 450px;
     margin-right: 450px;
+    margin-bottom: 20px;
+  }  
+
+    /* h3 {
+      text-align: center;
+  } */
+
+  .container {
+    background-color: #060c21;
+    position: relative;
+    /* width: 30%; */
+    /* min-height: 400px; */
+    /* margin: 40px; */
+  }
+  .container::before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    top: -7px;
+    left: -7px;
+    right: -7px;
+    bottom: -7px;
+    border-radius: 20px;
+    z-index: -1;
+  }
+  .container::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 20px;
+    z-index: -2;
+    filter: blur(40px);
+    margin: 30px;
+  }
+  .container::before, .container::after {
+      background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+  }
+  .container h3 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 5px;
+      padding: 10px;
+  }
+  .container label {
+      font-size: 25px;
+      color: rgb(204, 199, 199);
+      margin-left: 35%;
+      /* font-weight: bold; */
+  }
+  .container input {
+      font-size: 30px;
+      margin: 10px 5%;
+      width: auto;
+      text-align: center;
+      /* font-weight: bold; */
+  }
+  .calc, .calc-square, .calc-rec, .calc-cylinder {
+      background-color: rgb(196, 15, 15);
+      color: #fff;
+      font-size: 25px;
+      margin: 15px 35%;
+      /* border: none; */
+  } 
+  .container p {
+      font-size: 25px;
+      width: 50%;
+      /* font-weight: bold; */
+      color: rgb(7, 194, 7);
+      margin: 30px;
+      text-align: center;
   }
