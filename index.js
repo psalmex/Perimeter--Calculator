@@ -1,4 +1,8 @@
 "'use strict'";
+const circle = document.getElementById('circle-peri');
+const square = document.getElementById('square-peri');
+const rectangle = document.getElementById('rectangle-peri');
+const cylinder = document.getElementById('cylinder-peri');
 const radius = document.getElementById('radius-peri');
 const squareLenght = document.getElementById('sqr-lenght');
 const rectangleLenght = document.getElementById('rec-lenght');
