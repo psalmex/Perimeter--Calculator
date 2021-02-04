@@ -35,7 +35,7 @@
             <h3>CIRCLE PERIMETER CALCULATOR</h3>
 
             Radius:
-            <input id="radius-peri" type="number" min="1" max="1000" required />
+            <input id="radius-peri" type="number" min="1" max="1000" oninput="validity.valid||(value='');" required />
             <span id="radius-unit">
                 <select id="number" name="number">
 
@@ -55,7 +55,7 @@
             <h3>SQUARE PERIMETER CALCULATOR</h3>
 
             Lenght:
-            <input id="sqr-lenght" type="number" min="1" max="1000" required />
+            <input id="sqr-lenght" type="number" min="1" max="1000" oninput="validity.valid||(value='');" required />
             <span id="unit-lenght">
                 <select id="number" name="number">
 
@@ -75,7 +75,7 @@
             <h3>RECTANGLE PERIMETER CALCULATOR</h3>
 
             Lenght:
-            <input id="rec-lenght" type="number" min="1" max="1000" required />
+            <input id="rec-lenght" type="number" min="1" max="1000" oninput="validity.valid||(value='');" required />
             <span id="unit-lenght">
                 <select id="number" name="number">
 
@@ -86,7 +86,7 @@
             <br /><br />
 
             Width:
-            <input id="rec-width" type="number" min="1" max="1000" required />
+            <input id="rec-width" type="number" min="1" max="1000" oninput="validity.valid||(value='');" required />
             <span id="unit-width">
                 <select id="number" name="number">
 
@@ -106,7 +106,7 @@
             <h3>CYLINDER PERIMETER CALCULATOR</h3>
 
             Radius:
-            <input id="cyl-radius" type="number" min="1" max="1000" required />
+            <input id="cyl-radius" type="number" min=1 max="1000" oninput="validity.valid||(value='');" required />
             <span id="unit-radius">
                 <select id="number" name="number">
 
@@ -116,7 +116,7 @@
             <br><br>
 
             Height:
-            <input id="cyl-height" type="number" min="1" max="1000" required />
+            <input id="cyl-height" type="number" min="1" oninput="validity.valid||(value='');" max="1000" required />
             <span id="unit-height">
                 <select id="number" name="number">
                     <option value="cm.">cm</option>
